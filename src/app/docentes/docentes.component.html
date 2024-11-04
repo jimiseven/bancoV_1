@@ -1,0 +1,25 @@
+<div>
+  <h2>Lista de Docentes</h2>
+  <ul>
+    <li *ngFor="let docente of docentes">
+      {{ docente.nombre }} {{ docente.apellido }} - {{ docente.especialidad }} - {{ docente.mail }}
+    </li>
+  </ul>
+
+  <h2>Agregar Nuevo Docente</h2>
+  <form (ngSubmit)="addDocente()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="newDocente.nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" [(ngModel)]="newDocente.apellido" name="apellido" required>
+
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" [(ngModel)]="newDocente.mail" name="mail" required>
+
+    <label for="especialidad">Especialidad:</label>
+    <input type="text" id="especialidad" [(ngModel)]="newDocente.especialidad" name="especialidad" required>
+
+    <button type="submit">Agregar Docente</button>
+  </form>
+</div>
