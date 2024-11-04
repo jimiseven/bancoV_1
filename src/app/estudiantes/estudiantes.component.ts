@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './estudiantes.component.html',
   styleUrls: ['./estudiantes.component.scss'],
-  imports: [CommonModule, FormsModule] // Importación automática en Angular 17
+  imports: [CommonModule, FormsModule]
 })
 export class EstudiantesComponent implements OnInit {
   estudiantes: any[] = [];
